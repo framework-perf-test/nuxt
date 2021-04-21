@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1282059b-d7fc-4108-ba8c-8f00f178f7f8/deploy-status)](https://app.netlify.com/sites/perf-test-nuxt/deploys)
+
 # nuxt
 
 ## Build Setup
