@@ -11,7 +11,8 @@
     },
     "upload":{
       "target":"filesystem",
-      "outputDir":"./dist/lighthouse"
+      "outputDir":"./dist/_lighthouse",
+      "reportFilenamePattern": "%%PATHNAME%%.report.%%EXTENSION%%"
     }
   }
 }
