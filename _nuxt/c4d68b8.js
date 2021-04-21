@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{196:function(t,e,n){"use strict";n.r(e);var l=n(1).a.extend({head:{title:"Nuxt"},data:function(){return{title:"World"}}}),r=n(41),component=Object(r.a)(l,(function(){var t=this,e=t.$createElement;return(t._self._c||e)("h1",[t._v("Hello "+t._s(t.title)+"!!!")])}),[],!1,null,null,null);e.default=component.exports}}]);
