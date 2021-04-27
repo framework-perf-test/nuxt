@@ -1,0 +1,41 @@
+[
+  {
+    "url": "http://localhost:41095/",
+    "isRepresentativeRun": false,
+    "htmlPath": "/home/runner/work/nuxt/nuxt/dist/_lighthouse/_.report.html",
+    "jsonPath": "/home/runner/work/nuxt/nuxt/dist/_lighthouse/_.report.json",
+    "summary": {
+      "performance": 0.86,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 0.78,
+      "pwa": 0.2
+    }
+  },
+  {
+    "url": "http://localhost:41095/",
+    "isRepresentativeRun": false,
+    "htmlPath": "/home/runner/work/nuxt/nuxt/dist/_lighthouse/_.report.html",
+    "jsonPath": "/home/runner/work/nuxt/nuxt/dist/_lighthouse/_.report.json",
+    "summary": {
+      "performance": 0.99,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 0.78,
+      "pwa": 0.2
+    }
+  },
+  {
+    "url": "http://localhost:41095/",
+    "isRepresentativeRun": true,
+    "htmlPath": "/home/runner/work/nuxt/nuxt/dist/_lighthouse/_.report.html",
+    "jsonPath": "/home/runner/work/nuxt/nuxt/dist/_lighthouse/_.report.json",
+    "summary": {
+      "performance": 0.99,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 0.78,
+      "pwa": 0.2
+    }
+  }
+]
