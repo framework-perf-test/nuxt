@@ -1,7 +1,7 @@
 <template>
   <section>
     <header>
-      <h1>SvelteKit Demo</h1>
+      <h1>Nuxt Demo</h1>
       <nav>
         <a href="/">Home</a>
       </nav>
@@ -22,4 +22,11 @@
   </section>
 </template>
 
-<style></style>
+<script lang="ts">
+import { Vue, Component } from 'vue-property-decorator'
+
+@Component({
+  components: {},
+})
+export default class Default extends Vue {}
+</script>

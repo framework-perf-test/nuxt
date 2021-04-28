@@ -6,20 +6,17 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { Vue, Component } from 'vue-property-decorator';
+import Todos from '../components/Todos.vue';
 
-export default Vue.extend({
-  head: {
-    title: 'Lighthouse Test | Nuxt',
-  },
-  meta: [
-    {
-      hid: 'description',
-      name: 'description',
-      content: 'Lighthouse Test | Nuxt',
-    },
-  ],
+@Component({
+  components: { Todos },
+  meta: {
+    title: 'Lighthouse Test | Quasar',
+    meta: {
+      description: { name: 'description', content: 'Lighthouse Test | Quasar' }
+    }
+  }
 })
+export default class PageIndex extends Vue {}
 </script>
-
-<style></style>

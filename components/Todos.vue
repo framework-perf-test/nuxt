@@ -44,52 +44,49 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { Vue, Component } from 'vue-property-decorator';
 import {
   addTodo,
   deleteTodo,
   getTodo,
   getTodos,
   Todo,
-  updateTodo,
-} from '~/content/todos'
+  updateTodo
+} from './todos';
+import TodoForm from './TodoForm.vue';
 
-interface Data {
-  currentTodo: Partial<Todo> | null
-  todos: Todo[]
-}
+@Component({
+  components: {
+    TodoForm
+  }
+})
+export default class Todos extends Vue {
+  currentTodo: Partial<Todo> | null = null;
+  todos: Todo[] = getTodos();
 
-export default Vue.extend({
-  data: function (): Data {
-    return {
-      currentTodo: null,
-      todos: getTodos(),
+  addTodoHandler() {
+    this.currentTodo = {
+      confidential: 'No',
+      remind: false
+    };
+  }
+
+  selectTodoHandler(id: number) {
+    this.currentTodo = getTodo(id);
+  }
+
+  deleteTodoHandler(id: number) {
+    deleteTodo(id);
+    this.todos = getTodos();
+  }
+
+  onUpdateTodoHandler(todo: Partial<Todo>) {
+    if (!todo.id) {
+      addTodo(todo);
+    } else {
+      updateTodo(todo as Todo);
     }
-  },
-  methods: {
-    addTodoHandler: function () {
-      this.currentTodo = {
-        confidential: 'No',
-        remind: false,
-      }
-    },
-    selectTodoHandler: function (id: number) {
-      this.currentTodo = getTodo(id)
-    },
-    deleteTodoHandler: function (id: number) {
-      deleteTodo(id)
-      this.todos = getTodos()
-    },
-    onUpdateTodoHandler: function (todo: Partial<Todo>) {
-      if (!todo.id) {
-        addTodo(todo)
-      } else {
-        updateTodo(todo as Todo)
-      }
-      this.currentTodo = null
-    },
-  },
-});
+    this.currentTodo = null;
+  }
+}
 </script>
-
-<style></style>

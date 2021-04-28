@@ -112,54 +112,47 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import { TYPES } from '~/content/todos'
+import { Vue, Component, Prop } from 'vue-property-decorator';
+import { Todo, TodoErrorStatus, TYPES } from './todos';
 
-interface Data {
-  types: string[]
-  errors: any
-}
+@Component
+export default class TodoForm extends Vue {
+  @Prop({ type: Object, required: true }) readonly todo!: Partial<Todo>;
 
-export default Vue.extend({
-  props: ['todo'],
-  data: function (): Data {
-    return {
-      types: TYPES,
-      errors: {
-        status: false,
-      },
+  types: string[] = TYPES;
+
+  errors: TodoErrorStatus = {
+    status: false
+  };
+
+  // eslint-disable-next-line
+  updateTodoHandler = (event: any) => {
+    // eslint-disable-next-line
+    event.preventDefault();
+    this.errors = { status: false };
+    if (!this.todo.name) {
+      this.errors.name = 'Name is required.';
+      this.errors.status = true;
     }
-  },
-  methods: {
-    updateTodoHandler: function (event: any) {
-      event.preventDefault()
-      this.errors = { status: false }
-      if (!this.todo.name) {
-        this.errors.name = 'Name is required.'
-        this.errors.status = true
+    if (!this.todo.description) {
+      this.errors.description = 'Description is required.';
+      this.errors.status = true;
+    }
+    if (!this.todo.type) {
+      this.errors.type = 'Type is required.';
+      this.errors.status = true;
+    }
+    if (!this.todo.date) {
+      this.errors.date = 'Date is required.';
+      this.errors.status = true;
+    }
+    setTimeout(() => {
+      if (!this.errors.status) {
+        this.$emit('onAddOrUpdate', this.todo);
+      } else {
+        alert('All Fields are required');
       }
-      if (!this.todo.description) {
-        this.errors.description = 'Description is required.'
-        this.errors.status = true
-      }
-      if (!this.todo.type) {
-        this.errors.type = 'Type is required.'
-        this.errors.status = true
-      }
-      if (!this.todo.date) {
-        this.errors.date = 'Date is required.'
-        this.errors.status = true
-      }
-      setTimeout(() => {
-        if (!this.errors.status) {
-          this.$emit('onAddOrUpdate', this.todo)
-        } else {
-          alert('All Fields are required')
-        }
-      })
-    },
-  },
-})
+    });
+  };
+}
 </script>
-
-<style></style>
