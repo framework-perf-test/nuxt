@@ -5,7 +5,7 @@
     "htmlPath": "/home/runner/work/nuxt/nuxt/dist/_lighthouse/_.report.html",
     "jsonPath": "/home/runner/work/nuxt/nuxt/dist/_lighthouse/_.report.json",
     "summary": {
-      "performance": 0.84,
+      "performance": 0.77,
       "accessibility": 0.95,
       "best-practices": 1,
       "seo": 0.75,
