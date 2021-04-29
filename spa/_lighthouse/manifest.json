@@ -1,38 +1,38 @@
 [
   {
-    "url": "http://localhost:35849/",
+    "url": "http://localhost:42573/",
     "isRepresentativeRun": false,
     "htmlPath": "/home/runner/work/nuxt/nuxt/dist/_lighthouse/_.report.html",
     "jsonPath": "/home/runner/work/nuxt/nuxt/dist/_lighthouse/_.report.json",
     "summary": {
-      "performance": 0.99,
-      "accessibility": 0.95,
+      "performance": 0.97,
+      "accessibility": 0.97,
       "best-practices": 1,
       "seo": 0.69,
       "pwa": 0.2
     }
   },
   {
-    "url": "http://localhost:35849/",
+    "url": "http://localhost:42573/",
     "isRepresentativeRun": false,
     "htmlPath": "/home/runner/work/nuxt/nuxt/dist/_lighthouse/_.report.html",
     "jsonPath": "/home/runner/work/nuxt/nuxt/dist/_lighthouse/_.report.json",
     "summary": {
       "performance": 0.99,
-      "accessibility": 0.95,
+      "accessibility": 0.97,
       "best-practices": 1,
       "seo": 0.69,
       "pwa": 0.2
     }
   },
   {
-    "url": "http://localhost:35849/",
+    "url": "http://localhost:42573/",
     "isRepresentativeRun": true,
     "htmlPath": "/home/runner/work/nuxt/nuxt/dist/_lighthouse/_.report.html",
     "jsonPath": "/home/runner/work/nuxt/nuxt/dist/_lighthouse/_.report.json",
     "summary": {
       "performance": 0.99,
-      "accessibility": 0.95,
+      "accessibility": 0.97,
       "best-practices": 1,
       "seo": 0.69,
       "pwa": 0.2

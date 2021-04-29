@@ -5,8 +5,8 @@
     "htmlPath": "/home/runner/work/nuxt/nuxt/dist/_lighthouse/_.report.html",
     "jsonPath": "/home/runner/work/nuxt/nuxt/dist/_lighthouse/_.report.json",
     "summary": {
-      "performance": 0.77,
-      "accessibility": 0.95,
+      "performance": 0.76,
+      "accessibility": 0.97,
       "best-practices": 1,
       "seo": 0.75,
       "pwa": 0.2
@@ -19,7 +19,7 @@
     "jsonPath": "/home/runner/work/nuxt/nuxt/dist/_lighthouse/_.report.json",
     "summary": {
       "performance": 1,
-      "accessibility": 0.95,
+      "accessibility": 0.97,
       "best-practices": 1,
       "seo": 0.75,
       "pwa": 0.2
@@ -32,7 +32,7 @@
     "jsonPath": "/home/runner/work/nuxt/nuxt/dist/_lighthouse/_.report.json",
     "summary": {
       "performance": 1,
-      "accessibility": 0.95,
+      "accessibility": 0.97,
       "best-practices": 1,
       "seo": 0.75,
       "pwa": 0.2
