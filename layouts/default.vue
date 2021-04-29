@@ -3,7 +3,7 @@
     <header>
       <h1>Nuxt Demo</h1>
       <nav>
-        <a href="/">Home</a>
+        <NuxtLink to="/">Home</NuxtLink>
       </nav>
     </header>
     <br />
