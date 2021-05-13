@@ -6,17 +6,17 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component } from 'vue-property-decorator';
-import Todos from '../components/Todos.vue';
+import { Vue, Component } from 'vue-property-decorator'
+import Todos from '../components/Todos.vue'
 
 @Component({
   components: { Todos },
   meta: {
-    title: 'Lighthouse Test | Quasar',
+    title: 'Lighthouse Test | Nuxt',
     meta: {
-      description: { name: 'description', content: 'Lighthouse Test | Quasar' }
-    }
-  }
+      description: { name: 'description', content: 'Lighthouse Test | Nuxt' },
+    },
+  },
 })
 export default class PageIndex extends Vue {}
 </script>

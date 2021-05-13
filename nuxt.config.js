@@ -1,7 +1,7 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: process.env.MODE === 'ssr' ? 'server' : 'static',
-  ssr: process.env.MODE === 'spa' ? false : true,
+  ssr: process.env.MODE !== 'spa',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -10,7 +10,7 @@ export default {
     },
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
@@ -44,7 +44,7 @@ export default {
       removeEmptyAttributes: true,
       removeRedundantAttributes: true,
       trimCustomFragments: true,
-      useShortDoctype: true
-    }
+      useShortDoctype: true,
+    },
   },
 }
