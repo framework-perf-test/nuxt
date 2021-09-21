@@ -5,11 +5,11 @@
     "htmlPath": "/home/runner/work/nuxt/nuxt/dist/_lighthouse/_.report.html",
     "jsonPath": "/home/runner/work/nuxt/nuxt/dist/_lighthouse/_.report.json",
     "summary": {
-      "performance": 0.95,
-      "accessibility": 0.97,
+      "performance": 0.65,
+      "accessibility": 0.8,
       "best-practices": 1,
-      "seo": 0.75,
-      "pwa": 0.2
+      "seo": 0.82,
+      "pwa": 0.3
     }
   },
   {
@@ -18,11 +18,11 @@
     "htmlPath": "/home/runner/work/nuxt/nuxt/dist/_lighthouse/_.report.html",
     "jsonPath": "/home/runner/work/nuxt/nuxt/dist/_lighthouse/_.report.json",
     "summary": {
-      "performance": 1,
-      "accessibility": 0.97,
+      "performance": 0.83,
+      "accessibility": 0.8,
       "best-practices": 1,
-      "seo": 0.75,
-      "pwa": 0.2
+      "seo": 0.82,
+      "pwa": 0.3
     }
   },
   {
@@ -31,11 +31,11 @@
     "htmlPath": "/home/runner/work/nuxt/nuxt/dist/_lighthouse/_.report.html",
     "jsonPath": "/home/runner/work/nuxt/nuxt/dist/_lighthouse/_.report.json",
     "summary": {
-      "performance": 1,
-      "accessibility": 0.97,
+      "performance": 0.82,
+      "accessibility": 0.8,
       "best-practices": 1,
-      "seo": 0.75,
-      "pwa": 0.2
+      "seo": 0.82,
+      "pwa": 0.3
     }
   }
 ]
