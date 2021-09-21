@@ -1,45 +1,29 @@
 <template>
   <section>
-    <h4>Todo</h4>
-    <table>
-      <tbody>
-        <tr>
-          <th align="left">Name</th>
-          <td>
-            {{ todo.name }}
-          </td>
-        </tr>
-        <tr>
-          <th align="left">Description</th>
-          <td>
-            {{ todo.description }}
-          </td>
-        </tr>
-        <tr>
-          <th align="left">Type</th>
-          <td>{{ todo.type }}</td>
-        </tr>
-        <tr>
-          <th align="left">Confidential</th>
-          <td>
-            {{ todo.confidential }}
-          </td>
-        </tr>
-        <tr>
-          <th align="left">Remind</th>
-          <td>{{ todo.remind }}</td>
-        </tr>
-        <tr>
-          <th align="left">Date</th>
-          <td>{{ todo.date }}</td>
-        </tr>
-        <tr>
-          <th colspan="2" align="right">
-            <button type="button" @click="closeTodoHandler">Close</button>
-          </th>
-        </tr>
-      </tbody>
-    </table>
+    <v-card>
+      <v-divider></v-divider>
+      <v-card-title>Todo</v-card-title>
+      <v-card-text>
+        <dl>
+          <dt>Name</dt>
+          <dd>{{ todo.name }}</dd>
+          <dt>Description</dt>
+          <dd>{{ todo.description }}</dd>
+          <dt>Type</dt>
+          <dd>{{ todo.type }}</dd>
+          <dt>Confidential</dt>
+          <dd>{{ todo.confidential }}</dd>
+          <dt>Remind</dt>
+          <dd>{{ todo.remind }}</dd>
+          <dt>Date</dt>
+          <dd>{{ todo.date }}</dd>
+        </dl>
+      </v-card-text>
+      <v-divider></v-divider>
+      <v-card-actions>
+        <v-btn text @click="closeTodoHandler"> Close </v-btn>
+      </v-card-actions>
+    </v-card>
   </section>
 </template>
 

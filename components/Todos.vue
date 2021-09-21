@@ -1,6 +1,8 @@
 <template>
   <section>
-    <h3>Todos <button @click="addTodoHandler()">New</button></h3>
+    <h5 class="text-h5">
+      Todos <v-btn color="primary" @click="addTodoHandler()">New</v-btn>
+    </h5>
     <TodoView
       v-if="currentTodo && currentEvent === 'view'"
       :todo="currentTodo"
@@ -12,44 +14,50 @@
       @onAddOrUpdate="onUpdateTodoHandler"
     />
     <br />
-    <table width="100%">
-      <thead>
-        <tr>
-          <th align="left">Id</th>
-          <th align="left">Name</th>
-          <th align="left">description</th>
-          <th align="left">Type</th>
-          <th align="left">Confidential</th>
-          <th align="left">Remind</th>
-          <th align="left">Date</th>
-          <th align="left">Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="todo in todos" :key="todo.id">
-          <td>{{ todo.id }}</td>
-          <td>{{ todo.name }}</td>
-          <td>{{ todo.description }}</td>
-          <td>{{ todo.type }}</td>
-          <td>{{ todo.confidential }}</td>
-          <td>{{ todo.remind.toString() }}</td>
-          <td>{{ todo.date }}</td>
-          <td>
-            <button type="button" @click="selectTodoHandler(todo.id, 'view')">
-              View
-            </button>
-            &nbsp;
-            <button type="button" @click="selectTodoHandler(todo.id, 'edit')">
-              Edit
-            </button>
-            &nbsp;
-            <button type="button" @click="deleteTodoHandler(todo.id)">
-              Delete
-            </button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <v-simple-table>
+      <template v-slot:default>
+        <thead>
+          <tr>
+            <th align="left">Id</th>
+            <th align="left">Name</th>
+            <th align="left">description</th>
+            <th align="left">Type</th>
+            <th align="left">Confidential</th>
+            <th align="left">Remind</th>
+            <th align="left">Date</th>
+            <th align="left">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="todo in todos" :key="todo.id">
+            <td>{{ todo.id }}</td>
+            <td>{{ todo.name }}</td>
+            <td>{{ todo.description }}</td>
+            <td>{{ todo.type }}</td>
+            <td>{{ todo.confidential }}</td>
+            <td>{{ todo.remind.toString() }}</td>
+            <td>{{ todo.date }}</td>
+            <td>
+              <v-btn
+                color="primary"
+                @click="selectTodoHandler(todo.id, 'view')"
+              >
+                View
+              </v-btn>
+              <v-btn
+                color="primary"
+                @click="selectTodoHandler(todo.id, 'edit')"
+              >
+                Edit
+              </v-btn>
+              <v-btn color="error" @click="deleteTodoHandler(todo.id)">
+                Delete
+              </v-btn>
+            </td>
+          </tr>
+        </tbody>
+      </template>
+    </v-simple-table>
   </section>
 </template>
 

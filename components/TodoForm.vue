@@ -1,21 +1,57 @@
 <template>
   <section>
-    <h4>{{ todo.id ? 'Update' : 'Add' }} Todo</h4>
     <form novalidate @submit="updateTodoHandler">
-      <table>
+      <v-dialog v-model="dialog" width="300">
+        <v-card>
+          <v-card-title> Add Todo </v-card-title>
+
+          <v-card-text>
+            <v-text-field
+              v-model="todo.name"
+              label="Name"
+              filled
+              type="text"
+              name="name"
+              required
+            ></v-text-field>
+            <v-textarea
+              v-model="todo.description"
+              filled
+              name="description"
+              label="Description"
+              required
+            ></v-textarea>
+            <v-select
+              v-model="todo.type"
+              filled
+              name="type"
+              required
+              :items="types"
+            >
+              <!-- <option v-for="type in types" :key="type" :value="type">
+                  {{ type }}
+                </option> -->
+            </v-select>
+          </v-card-text>
+
+          <v-divider></v-divider>
+
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn type="submit" color="primary" text>
+              {{ todo.id ? 'Update' : 'Add' }}
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
+      <!-- <table>
         <tbody>
           <tr>
             <th align="left">
               <label for="name">Name</label>
             </th>
             <td>
-              <input
-                id="name"
-                v-model="todo.name"
-                type="text"
-                name="name"
-                required
-              />
+              <input id="name" v-model="todo.name" />
             </td>
             <td>{{ errors.name }}</td>
           </tr>
@@ -102,11 +138,11 @@
           </tr>
           <tr>
             <th colspan="2" align="right">
-              <button type="submit">{{ todo.id ? 'Update' : 'Add' }}</button>
+              <button type="submit"></button>
             </th>
           </tr>
         </tbody>
-      </table>
+      </table> -->
     </form>
   </section>
 </template>
@@ -117,6 +153,8 @@ import { Todo, TodoErrorStatus, TYPES } from './todos'
 
 @Component
 export default class TodoForm extends Vue {
+  dialog = true
+
   @Prop({ type: Object, required: true }) readonly todo!: Partial<Todo>
 
   types: string[] = TYPES
@@ -127,8 +165,9 @@ export default class TodoForm extends Vue {
 
   // eslint-disable-next-line
   updateTodoHandler = (event: any) => {
+    console.log('here')
     // eslint-disable-next-line
-    event.preventDefault();
+    event.preventDefault()
     this.errors = { status: false }
     if (!this.todo.name) {
       this.errors.name = 'Name is required.'
